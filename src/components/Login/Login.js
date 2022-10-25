@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import './Login.css'
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
     return (
@@ -21,7 +25,12 @@ const Login = () => {
                     </Button>
                 </Form>
 
-                <hr className='hr-text' data-content="OR" />
+                <div className=' container center-separator mt-5 mb-5 w-25'>OR</div>
+
+                <ButtonGroup  vertical>
+                    <Button className='btn-login px-5 mb-2'> <FaGoogle className='mx-2'></FaGoogle> LogIn With Google</Button>
+                    <Button className='btn-login px-5'> <FaGithub className='mx-2'></FaGithub>LogIn With GitHub</Button>
+                </ButtonGroup>
         </div>
         
     );
