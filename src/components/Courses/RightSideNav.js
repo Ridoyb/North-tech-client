@@ -13,7 +13,7 @@ const RightSideNav = () => {
     }, [])
     return (
         <div>
-            <h3 className='mt-5'>All Courses: {courses.length}</h3>
+            <h3 className='my-5'>All Courses: {courses.length}</h3>
 
             <div>
                 {

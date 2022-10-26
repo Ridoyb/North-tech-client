@@ -6,6 +6,7 @@ import Faq from "../components/Faq/Faq";
 import Main from "../layouts/Main";
 import Course from "../components/Courses/Course/Course";
 import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 export const routes= createBrowserRouter([
     {
@@ -37,6 +38,10 @@ export const routes= createBrowserRouter([
             path: 'login',
             element: <Login></Login>
         },
+        {
+            path: 'register',
+            element: <Register></Register>
+        }
     ]
     }
 
