@@ -9,9 +9,9 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
     return (
-        <div className='text-center mb-5'>
+        <div className='text-center mb-5 login-from mt-5 pb-3'>
             <h3 className='text-center mt-5 mb-5'>Log In</h3>
-                <Form className='container w-25 '>
+                <Form className='container '>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control type="email" placeholder="Enter email" />
                     </Form.Group>

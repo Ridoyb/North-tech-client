@@ -9,9 +9,9 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 const Register = () => {
     return (
         <div>
-            <div className='text-center mb-5'>
+            <div className='text-center mb-5 login-from mt-5 pb-3'>
             <h3 className='text-center mt-5 mb-5'>Register</h3>
-                <Form className='container w-25 '>
+                <Form className='container '>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Control type="text" placeholder="Enter Full Name" required />
                     </Form.Group>
