@@ -1,6 +1,7 @@
 .btn-login{
     background: blueviolet !important;
     color: white !important;
+    width: 100%;
 }
 
 .login-from {

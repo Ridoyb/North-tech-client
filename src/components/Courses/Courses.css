@@ -4,6 +4,10 @@
     gap: 10px;
 }
 
+.card-image{
+    height: 200px;
+}
+
 
 @media screen  and (min-width:801px) and (  max-width:1400px) {
     .course-card{
@@ -33,4 +37,12 @@
 .btn-start{
     background-color: blueviolet !important;
     color: white !important;
+}
+.link-start-btn{
+    text-decoration: none;
+    color: white;
+}
+
+.link-start-btn:hover{
+    color:black;
 }

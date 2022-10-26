@@ -8,6 +8,7 @@ import RightSideNav from './RightSideNav';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './Courses.css'
+import { Link } from 'react-router-dom';
 
 
 const Courses = () => {
@@ -33,19 +34,17 @@ const Courses = () => {
                    {
                         courses.map(course => <div >
                             <Card  style={{ width: '20rem' }} key={course.id}>
-                                <Card.Img variant="top" src={course.image} />
+                                <Card.Img variant="top" className='card-image' src={course.image} />
                                 <Card.Body>
                                 <div className='card-title-btn'>
                                     <Card.Title>{course.name}</Card.Title>
-                                    <Button variant="" className='btn-start' href={`/courses/${course.id}`}>Start</Button>
+                                    <Button variant="" className='btn-start'> <Link to={`/courses/${course.id}`} className='link-start-btn'>Start</Link> </Button>
                                 </div>
                                 </Card.Body>
                             </Card>
                         </div>)
                     }
-                   </div>
-                   
-                    
+                   </div>   
                 </Col>
             </Row>
         </Container>

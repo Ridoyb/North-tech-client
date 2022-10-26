@@ -1,0 +1,24 @@
+.btn-pdf{
+    background-color: blueviolet !important;
+    color: white !important;
+}
+
+.break{
+  color: blueviolet;
+}
+
+.star{
+    color: blueviolet;
+}
+.price-rating-btn{
+    border: 1px solid blueviolet;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+
+.description{
+    border: 1px solid blueviolet;
+    padding: 20px;
+    border-radius: 5px;
+}

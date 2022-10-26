@@ -17,7 +17,7 @@ const RightSideNav = () => {
 
             <div>
                 {
-                    courses.map(course => <p className='right-side-title' key={course.id}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>)
+                    courses.map(course => <p className='right-side-title' key={course.id}><Link className='right-course-title' to={`/courses/${course.id}`}>{course.name}</Link></p>)
                 }
             </div>
         </div>

@@ -4,3 +4,8 @@
     text-align: center;
     background-color: rgb(249, 247, 251);
 }
+
+.right-course-title{
+    text-decoration: none;
+    color: blueviolet;
+}
