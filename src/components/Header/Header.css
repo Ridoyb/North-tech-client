@@ -1,3 +1,27 @@
 .logo{
     height: 75px;
 }
+
+.logout{
+    font-size: 20px;
+    width: 20px;
+    padding: 5px;
+    background-color: blueviolet !important;
+}
+
+
+.display-name{
+    margin-right: 30px;
+    color: white;
+}
+
+.user-icon{
+    color: blueviolet;
+    height: 25px !important;
+}
+
+.login-register{
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+}

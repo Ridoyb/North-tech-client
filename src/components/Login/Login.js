@@ -8,7 +8,7 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import {  getAuth, getRedirectResult, GithubAuthProvider, GoogleAuthProvider, signInWithCredential, signInWithPopup, signInWithRedirect } from 'firebase/auth';
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -29,12 +29,8 @@ const Login = () => {
                 console.log(user);
                 form.reset();
                 setError('');
-                if(user.emailVerified){
-                    navigate(from, {replace: true});
-                }
-                else{
-                    toast.error('Please verify your email.')
-                }
+                navigate(from, {replace: true});
+                
             })
             .catch(error => {
                 console.error(error)
@@ -44,7 +40,7 @@ const Login = () => {
                 setLoading(false);
             })
     }
-    const {providerLogin}= useContext(AuthContext);
+    const {providerLogin,signInWithGithub}= useContext(AuthContext);
 
     const googleProvider= new GoogleAuthProvider();
     const handleGoogleSignIn = () => {
@@ -55,6 +51,21 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
+    const githubProvider= new GithubAuthProvider();
+    const handleGithubSignIn = () => {
+        providerLogin(githubProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
+
+
+
+
+
+
     return (
         <div className='text-center mb-5 login-from mt-5 pb-3'>
             <h3 className='text-center mt-5 mb-5'>Log In</h3>
@@ -78,7 +89,7 @@ const Login = () => {
 
                 <ButtonGroup  vertical>
                     <Button onClick={handleGoogleSignIn} className='btn-login px-5 mb-2'> <FaGoogle className='mx-2'></FaGoogle> LogIn With Google</Button>
-                    <Button className='btn-login px-5'> <FaGithub className='mx-2'></FaGithub>LogIn With GitHub</Button>
+                    <Button onClick={handleGithubSignIn}  className='btn-login px-5'> <FaGithub className='mx-2'></FaGithub>LogIn With GitHub</Button>
                     <Form.Text className="text-danger">
                         {error}
                     </Form.Text>

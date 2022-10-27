@@ -9,6 +9,7 @@ import { FaUser } from 'react-icons/fa';
 import logo from '../../Assets/logo.png'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
+import { FaSignOutAlt } from "react-icons/fa";
 
 const Header = () => {
     // const {user}=useContext(AuthContext);
@@ -31,38 +32,38 @@ const Header = () => {
             <Nav.Link href='/faq'>FAQ</Nav.Link>
             <Nav.Link href='/blog'>Blog</Nav.Link>
           </Nav>
-          <Nav>
+          
             {/* <Nav.Link href='/login'>Log In</Nav.Link>
             <Nav.Link href='/register'>Register</Nav.Link> */}
-            <Nav.Link href=''>{user?.displayName}</Nav.Link>
-            <>
+            <Nav>
+                        <>
                             {
                                 user?.uid ?
                                     <>
-                                        <span>{user?.displayName}</span>
-                                        <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                        <span className='display-name'>{user?.displayName}</span>
+                                        <Button className='logout' variant="" onClick={handleLogOut}><FaSignOutAlt className='text-light'></FaSignOutAlt></Button>
                                     </>
                                     :
                                     <>
-                                        <Link to='/login'>Login</Link>
-                                        <Link to='/register'>Register</Link>
+                                        <Link className='login-register' to='/login'>Login</Link>
+                                        <Link className='login-register' to='/register'>Register</Link>
                                     </>
                             }
 
 
                         </>
-            <Link to="/profile">
+                        <Link to="/profile">
                             {user?.photoURL ?
                                 <Image
+                                    className='profile-img w-50 mx-4'
                                     style={{ height: '30px' }}
                                     roundedCircle
                                     src={user?.photoURL}>
                                 </Image>
-                                : <FaUser></FaUser>
+                                : <FaUser className='w-100 user-icon'></FaUser>
                             }
                         </Link>
-            
-          </Nav>
+                    </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
