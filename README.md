@@ -1,5 +1,30 @@
 # Getting Started with Create React App
 
+ ### Name: North Tech
+ Live link: [Netlify] (link)
+
+ Features:
+ * Responsive Navbar
+ * Data call from server side
+ * Google login/github login
+ * Manual email/password login/register
+ * Pdf generator
+ * Private Route
+ * Check out
+ * Blog
+ * Faq
+
+
+ Frameworks:
+ * React
+ * Bootstrap
+ * Firebase
+ * React to pdf
+ * react Router Dom
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
