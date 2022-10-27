@@ -7,6 +7,7 @@
     width: 20px;
     padding: 5px;
     background-color: blueviolet !important;
+    margin: 7px;
 }
 
 
@@ -18,10 +19,16 @@
 .user-icon{
     color: blueviolet;
     height: 25px !important;
+    text-align: start;
 }
 
 .login-register{
     text-decoration: none;
     margin-right: 20px;
     color: white;
+}
+
+.navbar-nav{
+    align-items: center;
+    margin-left: 5px;
 }

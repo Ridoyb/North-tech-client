@@ -88,7 +88,7 @@ const Login = () => {
                     </Button>
                 </Form>
 
-                <p className='text-dark mt-2'>Didn't register? <Link to='/register'>Register Now</Link></p>
+                <p className='our-courses mt-2'>Didn't register? <Link to='/register'>Register Now</Link></p>
 
                 <div className=' container center-separator mt-5 mb-5 w-75'>OR</div>
 

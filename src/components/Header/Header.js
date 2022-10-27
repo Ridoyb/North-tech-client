@@ -72,8 +72,10 @@ const Header = () => {
                                     </>
                                     :
                                     <>
+                                        <div className='d-flex'>
                                         <Link className='login-register' to='/login'>Login</Link>
                                         <Link className='login-register' to='/register'>Register</Link>
+                                        </div>
                                     </>
                             }
 
@@ -85,13 +87,13 @@ const Header = () => {
                             
                         {user?.photoURL ?
                                 <Image 
-                                    className='profile-img w-50 mx-4'
+                                    className='profile-img w-lg-75 h-lg-75 mx-4'
                                     style={{ height: '30px' }}
                                     roundedCircle
                                     title={user?.displayName}
                                     src={user?.photoURL}>
                                 </Image>
-                                : <FaUser className='w-100 user-icon'></FaUser>
+                                : <FaUser className='w-100 user-icon '></FaUser>
                             }
                         </Link>
                     </Nav>

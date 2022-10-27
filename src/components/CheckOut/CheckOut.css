@@ -10,19 +10,19 @@
 
 .checkout-from h5 {
     border: 1px solid blueviolet;
-    padding: auto;
+    padding: 10px 10px;
 }
 
 .checkout-from p{
     color: blueviolet !important;
     border: 1px solid blueviolet;
-    padding: auto;
+    padding: 10px 10px;
 }
 
 .heading{
     color: blueviolet;
     border-bottom: 1px solid blueviolet;
-    width: 25%;
+    width: 50%;
     text-align: center;
 }
 
