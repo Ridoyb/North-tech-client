@@ -37,11 +37,15 @@ const Course = () => {
                         <br />
                         <div>
                         <div  className='  mb-5 w-100 mx-auto title-price-rating-btn'>
-                            <h1 className='mb-3 our-courses'>{course.name}</h1>
+                            <h3 className='mb-3 our-courses '>{course.name}</h3>
                             <div className='price-rating-btn d-flex justify-content-between align-items-center'>
                             
-                            <h4  className='our-courses'>Price: ${course.price}</h4>
-                            <h4  className='text-center our-courses'><FaStar className='star'></FaStar> {course.rating}</h4>
+                                <div>
+                                    <h4  className='our-courses'>Price: ${course.price}</h4>
+                                </div>
+                                <div>
+                                    <h4  className='text-center our-courses'><FaStar className='star'></FaStar> {course.rating}</h4>
+                                </div>
                             </div>
                             <Button variant="" className='btn-start'> <Link to={`/checkout/${course.id}`} className='link-start-btn'>Get Premium Access</Link> </Button>
 
