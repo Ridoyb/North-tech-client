@@ -5,7 +5,7 @@ const Faq = () => {
     return (
         <div className='container'>
             
-            <h2 className='text-center mt-5'>Frequently Asked Questions About Python</h2>
+            <h2 className='text-center mt-5 our-courses '>Frequently Asked Questions About Python</h2>
             <hr className='break' />
 
             <Accordion className='mt-5 mb-5' defaultActiveKey="0">

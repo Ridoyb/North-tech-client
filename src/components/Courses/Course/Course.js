@@ -20,29 +20,38 @@ const Course = () => {
 
 
     return (
-        <div className='my-5 text-center container'>
-
-      
-
-            <div ref={ref}>
+        <div   className='my-5 text-center container w-50'>
+            <div >
                 <div>
-                    <h1 className='mb-3'>{course.name}</h1>
+                    
                     <Pdf targetRef={ref} filename="code-example.pdf">
                         {({ toPdf }) =>  <Button onClick={toPdf} className='btn-pdf' variant="">Generate PDF</Button>}
                     </Pdf>
                 </div>
                 <hr className='break' />
-                <div>
-                    <img className='w-100 my-5'  src={course.image} alt="" />
-                </div>
-                <div className=' price-rating-btn d-flex justify-content-between align-items-center mb-5'>
-                    <h4>Price: ${course.price}</h4>
-                    <h4 className='text-center'><FaStar className='star'></FaStar> {course.rating}</h4>
-                    <Button variant="" className='btn-start'> <Link to={`/checkout/${course.id}`} className='link-start-btn'>Get Premium Access</Link> </Button>
+                <div >
+                    <div >
+                        <img className='w-100 my-5'  src={course.image} alt="" />
+                    </div>
+                    <div ref={ref} className='mt-5'>
+                        <br />
+                        <div>
+                        <div  className='  mb-5 w-100 mx-auto title-price-rating-btn'>
+                            <h1 className='mb-3 our-courses'>{course.name}</h1>
+                            <div className='price-rating-btn d-flex justify-content-between align-items-center'>
+                            
+                            <h4  className='our-courses'>Price: ${course.price}</h4>
+                            <h4  className='text-center our-courses'><FaStar className='star'></FaStar> {course.rating}</h4>
+                            </div>
+                            <Button variant="" className='btn-start'> <Link to={`/checkout/${course.id}`} className='link-start-btn'>Get Premium Access</Link> </Button>
 
-                </div>
-                <div>
-                    <p className='description text-start text-black'>{course.description}</p>
+                        </div>
+                        </div>
+                        
+                        <div>
+                            <p className='description text-start w-100 mx-auto'>{course.description}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             

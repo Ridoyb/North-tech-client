@@ -12,7 +12,7 @@ import './Header.css'
 import { FaSignOutAlt } from "react-icons/fa";
 import { BsSunFill } from "react-icons/bs";
 import styled, { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, GlobalStyles , StyledApp} from "../ThemeToggle/Theme";
+import { lightTheme, darkTheme, GlobalStyles} from "../ThemeToggle/Theme";
 
 const Header = () => {
 
@@ -56,7 +56,7 @@ const Header = () => {
             <Nav.Link href='/blog'>Blog</Nav.Link>
             
             
-                <Nav.Link onClick={() => themeToggler()} ><BsSunFill></BsSunFill></Nav.Link>
+                <Nav.Link onClick={() => themeToggler()} ><BsSunFill></BsSunFill> Dark/Light</Nav.Link>
 
             
           </Nav>

@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import {  getAuth, getRedirectResult, GithubAuthProvider, GoogleAuthProvider, signInWithCredential, signInWithPopup, signInWithRedirect } from 'firebase/auth';
+import image from '../../Assets/logo.png'
 
 const Login = () => {
     const [error, setError] = useState('');
@@ -48,8 +49,10 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, {replace: true});
             })
             .catch(error => console.error(error))
+
     }
     const githubProvider= new GithubAuthProvider();
     const handleGithubSignIn = () => {
@@ -57,6 +60,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, {replace: true});
             })
             .catch(error => console.error(error))
     }
@@ -68,7 +72,8 @@ const Login = () => {
 
     return (
         <div className='text-center mb-5 login-from mt-5 pb-3'>
-            <h3 className='text-center mt-5 mb-5'>Log In</h3>
+            <img className='w-25 mt-2' src={image} alt="" />
+            <h3 className='text-center  mb-5 our-courses'>Log In</h3>
                 <Form onSubmit={handleSubmit} className='container '>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control name='email' type="email" placeholder="Enter email" required />

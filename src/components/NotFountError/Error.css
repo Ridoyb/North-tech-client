@@ -1,0 +1,12 @@
+.error{
+    padding: 130px;
+}
+.error img{
+    height: 200px;
+    width: 200px;
+}
+
+.error-title{
+    color: blueviolet;
+    font-size: 50px;
+} 

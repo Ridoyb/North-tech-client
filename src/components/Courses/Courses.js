@@ -28,7 +28,7 @@ const Courses = () => {
                 
                 <Col lg="3"><RightSideNav></RightSideNav></Col>
                 <Col lg="9">
-                    <h2 className='text-center mt-5'>Our Courses: {courses.length}</h2>
+                    <h2 className='text-center mt-5 our-courses'>Our Courses: {courses.length}</h2>
                    
                    <div className='course-card mt-5 mb-5 d-grid' >
                    {

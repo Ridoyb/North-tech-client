@@ -6,6 +6,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import image from '../../Assets/logo.png'
 
 const Register = () => {
 
@@ -56,7 +57,8 @@ const Register = () => {
     return (
         <div>
             <div className='text-center mb-5 login-from mt-5 pb-3'>
-            <h3 className='text-center mt-5 mb-5'>Register</h3>
+            <img className='w-25 mt-2' src={image} alt="" />
+            <h3 className='text-center mb-5 our-courses'>Register</h3>
                 <Form onSubmit={handleSubmit} className='container '>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Control name='name' type="text" placeholder="Enter Full Name" required />
@@ -75,6 +77,9 @@ const Register = () => {
                     <Button  className='btn-login px-5' variant="" type="submit">
                         Register
                     </Button>
+                    <Form.Text className="text-danger">
+                        {error}
+                    </Form.Text>
                 </Form>
 
                 <p className='text-dark mt-2'>Already registered? <Link to='/login'>LogIn</Link></p>

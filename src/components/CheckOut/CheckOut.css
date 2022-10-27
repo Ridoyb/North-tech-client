@@ -1,0 +1,34 @@
+.checkout-from {
+    
+    margin: auto;
+    border: 1px solid blueviolet;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    color: blueviolet !important;
+    
+}
+
+.checkout-from h5 {
+    border: 1px solid blueviolet;
+    padding: auto;
+}
+
+.checkout-from p{
+    color: blueviolet !important;
+    border: 1px solid blueviolet;
+    padding: auto;
+}
+
+.heading{
+    color: blueviolet;
+    border-bottom: 1px solid blueviolet;
+    width: 25%;
+    text-align: center;
+}
+
+.btn-checkout{
+    background: blueviolet !important;
+    color: white !important;
+    width: 100%;
+
+}

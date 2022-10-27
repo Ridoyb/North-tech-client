@@ -4,7 +4,7 @@ import './Blog.css'
 const Blog = () => {
     return (
         <div>
-            <h2 className='text-center mt-5 mb-5'>Blog</h2>
+            <h2 className='text-center mt-5 mb-5 our-courses'>Blog</h2>
             <div className='container blog-post mb-5 p-3'>
                 <h3>what is cors?</h3>
                 <p className='text-dark'><b>Ans:</b> CORS - Cross Origin Resource Sharing. It allows us to specify (on our server) what other servers can have access, by adding a couple headers to HTTP responses. This makes it possible to serve our front-end app from one server, and our back-end API from a different server, without sacrificing security. </p>
