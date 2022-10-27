@@ -79,15 +79,6 @@ const Register = () => {
 
                 <p className='text-dark mt-2'>Already registered? <Link to='/login'>LogIn</Link></p>
 
-                <div className=' container center-separator mt-5 mb-5 w-75'>OR</div>
-
-                <ButtonGroup  vertical>
-                    <Button className='btn-login px-5 mb-2'> <FaGoogle className='mx-2'></FaGoogle> Register With Google</Button>
-                    <Button className='btn-login px-5'> <FaGithub className='mx-2'></FaGithub>Register With GitHub</Button>
-                    <Form.Text className="text-danger">
-                        {error}
-                    </Form.Text>
-                </ButtonGroup>
         </div>
         </div>
     );

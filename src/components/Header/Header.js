@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,8 +10,27 @@ import logo from '../../Assets/logo.png'
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import './Header.css'
 import { FaSignOutAlt } from "react-icons/fa";
+import { BsSunFill } from "react-icons/bs";
+import styled, { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, GlobalStyles , StyledApp} from "../ThemeToggle/Theme";
 
 const Header = () => {
+
+
+    
+
+        const StyledApp = styled.div`
+        color: ${(props) => props.theme.fontColor};
+        `;
+
+
+        const [theme, setTheme] = useState("light");
+
+        const themeToggler = () => {
+            theme === "light" ? setTheme("dark") : setTheme("light");
+        };
+
+
     // const {user}=useContext(AuthContext);
     const { user, logOut } = useContext(AuthContext);
 
@@ -21,16 +40,25 @@ const Header = () => {
             .catch(error => console.error(error))
     }
     return (
+
+        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+            <GlobalStyles />
+            <StyledApp>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home"><img className='w-50 logo' src={logo} alt=""></img>North Tech</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link href='/'>Home</Nav.Link>
             <Nav.Link href='/courses'>Courses</Nav.Link>
             <Nav.Link href='/faq'>FAQ</Nav.Link>
             <Nav.Link href='/blog'>Blog</Nav.Link>
+            
+            
+                <Nav.Link onClick={() => themeToggler()} ><BsSunFill></BsSunFill></Nav.Link>
+
+            
           </Nav>
           
             {/* <Nav.Link href='/login'>Log In</Nav.Link>
@@ -40,7 +68,6 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <>
-                                        <span className='display-name'>{user?.displayName}</span>
                                         <Button className='logout' variant="" onClick={handleLogOut}><FaSignOutAlt className='text-light'></FaSignOutAlt></Button>
                                     </>
                                     :
@@ -52,12 +79,16 @@ const Header = () => {
 
 
                         </>
-                        <Link to="/profile">
-                            {user?.photoURL ?
-                                <Image
+
+                        
+                        <Link  to="/profile">
+                            
+                        {user?.photoURL ?
+                                <Image 
                                     className='profile-img w-50 mx-4'
                                     style={{ height: '30px' }}
                                     roundedCircle
+                                    title={user?.displayName}
                                     src={user?.photoURL}>
                                 </Image>
                                 : <FaUser className='w-100 user-icon'></FaUser>
@@ -66,7 +97,12 @@ const Header = () => {
                     </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+        </Navbar>
+
+            </StyledApp>
+        </ThemeProvider>
+
+        
     );
 };
 
