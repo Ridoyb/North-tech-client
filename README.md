@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
  ### Name: North Tech
- Live link: [Netlify] (link)
+ Live link: [Firebase] (https://north-tech.web.app)
 
  Features:
  * Responsive Navbar
